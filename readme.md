@@ -1,5 +1,4 @@
-Documentation of the fork
-
+Documentation of the forki
 # DAQ 2.2.2 with dpdk18.05 multi-queue (RSS) support
 
 The DPDK DAQ has been updated to version 2.2.2 with support for DPDK 18.05.
