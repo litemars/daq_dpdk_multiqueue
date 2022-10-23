@@ -838,8 +838,8 @@ static int dpdk_daq_acquire(void *handle, int cnt, DAQ_Analysis_Func_t callback,
         }
         got_one = 1;
 
-        if (bufs[i]->ol_flags & PKT_RX_TIMESTAMP) {
-          uint64_t ats = bufs[i]->timestamp / 1000ULL; // Convert to us
+        if (bufs[i]->ol_flags & IPOPT_TIMESTAMP) {
+          uint64_t ats = bufs[i]->timesync / 1000ULL; // Convert to us
           daqhdr.ts.tv_sec = ats / 1000000ULL;
           daqhdr.ts.tv_usec = (ats - ((uint64_t)daqhdr.ts.tv_sec * 1000000ULL));
         }
